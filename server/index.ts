@@ -10,8 +10,6 @@ import './directory'
 // If NODE_ENV value not define then dev value will be assign 
 const mode = process.env.NODE_ENV || 'local'
 
-console.log({mode})
-
 // Prepare file dotenv
 const fileEnv = `.env.${mode}`
 const pathEnv = path.resolve(global.DIR_CONFIG, fileEnv)
