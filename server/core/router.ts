@@ -1,7 +1,7 @@
 // Modules required for the server
 import path from 'path'
 import { Response } from 'express'
-import { CustomRequest,  } from '../types'
+import { IRequest } from '../types'
 
 const { NODE_ENV } = process.env
 
@@ -35,13 +35,14 @@ const redirectToDynamicScript = ({ method, params }:{method:string,params:string
 	return { dir: path.join(__dirname,'..','router', method, service, ...arg), id }
 }
 
-export const router = async (req: CustomRequest, res: Response) => 
+export const router = async (req: IRequest, res: Response) => 
 {	
 	// Recupear datos de la request
-	const { method, data } = req
+	const { method, data, isJsonRequest } = req
 
 	// Obtener el servicio y el controller de la query http://host/{service}/...{controller}
 	const params = getParams(req.originalUrl)
+	
 
 	// Ruta de los métodos
 	let {dir, id} = redirectToDynamicScript({method,params})
