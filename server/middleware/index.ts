@@ -1,7 +1,7 @@
 import { Response, NextFunction } from 'express'
-import { CustomRequest } from '../types'
+import { IRequest } from '../types'
 
-export const middleware = ( req: CustomRequest, res: Response, next: NextFunction ) =>
+export const middleware = ( req: IRequest, res: Response, next: NextFunction ) =>
 {	
 	// Ignore favicon
 	if (req.originalUrl.includes('favicon.ico')) return res.status(204).end()
