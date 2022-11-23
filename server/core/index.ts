@@ -40,7 +40,6 @@ const start = () => {
 
 }
 
-
 // Listener
 const server = app.listen(parseInt(port), host, start)
 
