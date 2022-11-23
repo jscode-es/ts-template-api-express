@@ -38,7 +38,7 @@ const redirectToDynamicScript = ({ method, params }:{method:string,params:string
 export const router = async (req: IRequest, res: Response) => 
 {	
 	// Recupear datos de la request
-	const { method, data, isJsonRequest } = req
+	const { method, data } = req
 
 	// Obtener el servicio y el controller de la query http://host/{service}/...{controller}
 	const params = getParams(req.originalUrl)
