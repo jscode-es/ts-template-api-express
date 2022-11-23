@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Template API Typescript",
   "main": "index.js",
+  "bin":"./dist/bin/cli.js",
   "scripts": {
     "start": "npm run service",
     "dev": "cross-env NODE_ENV=development && npm run start:backend ",
