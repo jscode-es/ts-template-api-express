@@ -48,7 +48,7 @@ In both cases, both in dynamic and static routes, the function must be declared 
 
 import { IReturn, IObject, IData } from '../types'
 
-export const getData ({ data, request }:IData): Promise<IReturn>
+export const getData ({ data, req }:IData): Promise<IReturn>
 
 ```
 ## 📓 Module typing
