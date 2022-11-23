@@ -1,6 +1,10 @@
 # Template API ExpressJS ( Typescript )
 Template of a server to offer a consumable service of a Rest API
 
+## Module installation
+```
+npx ts-template-api-express
+```
 
 ## 🐵 Basic use
 In the server folder there is "router", a folder to manage all web requests ( get, post, put, delete ). Within each folder you can establish the consumption of static and dynamic routes.
