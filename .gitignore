@@ -2,3 +2,4 @@ dist
 node_modules
 .editorconfig
 package-lock.json
+server/bin/cli.ts
