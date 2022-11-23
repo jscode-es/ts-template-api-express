@@ -1,0 +1,6 @@
+server
+tsconfig.json
+config
+.editorconfig
+.eslintrc.json
+__tests__
