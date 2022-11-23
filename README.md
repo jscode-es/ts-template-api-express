@@ -51,6 +51,49 @@ import { IReturn, IObject, IData } from '../types'
 export const getData ({ data, req }:IData): Promise<IReturn>
 
 ```
+
+### Example static
+```javascript
+
+// FILE_NAME: server/router/get/product/index.ts
+
+import db from 'object_mysql'
+
+import { IReturn, IObject, IData } from '../types'
+
+export const getData = async ({ data, req }:IData): Promise<IReturn>
+{
+	const { Product } = await db()
+
+	const { error, result } = await Product.get({limit:10})
+
+	return { status:200, error, result}
+}
+
+```
+
+### Example dynamic
+```javascript
+
+// FILE_NAME: server/router/get/product/[id].ts
+
+import db from 'object_mysql'
+
+import { IReturn, IObject, IData } from '../types'
+
+export const getData = async ({ data, req }:IData): Promise<IReturn>
+{
+	const { id } = data
+
+	const { Product } = await db()
+
+	const { error, result } = await Product.getById(id)
+
+	return { status:200, error, result}
+}
+
+```
+
 ## 📓 Module typing
 Below is the typing of the modules
 ```javascript
